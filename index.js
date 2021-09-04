@@ -11,3 +11,6 @@ function compactNumber(value) {
   return sortValue + suffixes[suffixNum];
 }
 
+function numberSplitWithSign(value, sign = ',') {
+  return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, sign)
+}
